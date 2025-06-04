@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; example</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="demo-styles.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
+    ></script>
+  </head>
+  <body>
+    <div id="card">
+      <model-viewer
+        id="paused-change-demo"
+        skybox-image="https://cdn.glitch.global/491b1eca-951a-4c1c-a34e-f42cff336c2d/1.jpg?v=1651657980216"
+        orientation="0deg 0 90"
+        autoplay
+        ar=""
+        shadow-intensity="1"
+        environment-image="neutral"
+        auto-rotate
+        camera-controls
+        ar-status="not-presenting"
+        ar-modes="webxr scene-viewer"
+        animation-name="Anim_1"       
+        src="https://cdn.glitch.me/736a3bd1-5405-4cb7-87f1-c05912593b7b/Vulcanos1.glb"
+        ios-src="https://cdn.glitch.global/854f1e8c-aea5-4736-a483-e302e5afc81b/Invisible_Queen.usdz?v=1651717130015"
+        poster="https://cdn.glitch.global/9e1c635f-a043-4af1-afd4-b8a98eb165a4/invnoun2.png?v=1651683638891"
+        alt="A 3D model of Invisible Queen Noun"
+      >
+        
+      </model-viewer>
+      <script>
+        (() => {
+          const modelViewer = document.querySelector("#paused-change-demo");          
+          modelViewer
+            .querySelector("#src")
+            .addEventListener("input", (event) => {
+            modelViewer.animationName = event.target.value;             
+            });
+          
+        })();
+        
+      </script>
+      <section class="attribution">
+        <span>
+          <h1>Invisible Queen Noun w/AR</h1>
+          <span
+            >By
+            <a href="" target="_blank">Nouner</a>
+          </span>
+        </span>
+        <a
+          class="cc"
+          href="https://opensea.io/collection/nouns3d"
+          target="_blank"
+        >
+          <img
+            src="https://cdn.glitch.global/9e1c635f-a043-4af1-afd4-b8a98eb165a4/invnoun.png?v=1651682081593"
+          />
+        </a>
+      </section>
+    </div>
+
+    <footer>
+      <span>This page is a basic demo of Invisible Queen Noun. ✌️</span>
+    </footer>
+  </body>
+</html>
