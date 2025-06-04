@@ -28,26 +28,38 @@
         auto-rotate
         camera-controls
         ar-status="not-presenting"
-        ar-modes="webxr scene-viewer"
-        animation-name="Anim_1"       
-        src="https://cdn.glitch.me/736a3bd1-5405-4cb7-87f1-c05912593b7b/Vulcanos1.glb"
-        ios-src="https://cdn.glitch.global/854f1e8c-aea5-4736-a483-e302e5afc81b/Invisible_Queen.usdz?v=1651717130015"
-        poster="https://cdn.glitch.global/9e1c635f-a043-4af1-afd4-b8a98eb165a4/invnoun2.png?v=1651683638891"
-        alt="A 3D model of Invisible Queen Noun"
-      >
+        ar-modes="webxr scene-viewer quick-look"
+        animation-name="Walk 01"
         
+        src="https://cdn.glitch.global/5847718b-344d-4e68-8a9b-25b504c754ec/myDoggy%20%235960.gltf?v=1652016385675"
+        poster="https://cdn.glitch.global/5847718b-344d-4e68-8a9b-25b504c754ec/snoop.png?v=1652016368034"
+        alt="A 3D model of my Dogg"
+      >
+        <div id="controls" class="dim">
+          <label for="src">Play:</label>
+          <select id="src">
+            <option value="Dance TikTok 01">Dance</option>
+            <option value="Sit Chair Idle 01">Sit</option>
+            <option value="Walk 01">Walk</option>
+            <option value="Chase 01">Chase</option>
+            <option value="Climb 01">Climb</option>
+            <option value="Dance Happy 01">Dance 2</option>
+            <option value="Dance TikTok 01">Dance 3</option>
+            <option value="Laugh 01">Laugh</option>
+            <option value="Lotus 01">Sit Zen</option>
+            <option value="Goodbye 01">Goodbye</option></select
+          ><br />
+        </div>
       </model-viewer>
       <script>
         (() => {
-          const modelViewer = document.querySelector("#paused-change-demo");          
+          const modelViewer = document.querySelector("#paused-change-demo");
           modelViewer
             .querySelector("#src")
             .addEventListener("input", (event) => {
-            modelViewer.animationName = event.target.value;             
+              modelViewer.animationName = event.target.value;
             });
-          
         })();
-        
       </script>
       <section class="attribution">
         <span>
@@ -57,6 +69,15 @@
             <a href="" target="_blank">Nouner</a>
           </span>
         </span>
+        <a
+          class="cc"
+          href="https://opensea.io/collection/nouns3d"
+          target="_blank"
+        >
+          <img
+            src="https://cdn.glitch.global/9e1c635f-a043-4af1-afd4-b8a98eb165a4/invnoun.png?v=1651682081593"
+          />
+        </a>
       </section>
     </div>
 
