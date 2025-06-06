@@ -25,6 +25,8 @@ model-viewer {
 
 .attribution {
   display: flex;
+  text-align: center;
+  margin-top: 20px;
   flex-direction: row;
   justify-content: space-between;
   margin: 1em;
